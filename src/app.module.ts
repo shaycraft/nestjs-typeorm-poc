@@ -10,6 +10,9 @@ import { AppController } from './app.controller';
 // services
 import { AppService } from './app.service';
 
+// entities
+import { User } from './entities/user';
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -19,7 +22,7 @@ import { AppService } from './app.service';
       username: 'postgres',
       password: 'changeme',
       database: 'postgres',
-      entities: [],
+      entities: [User],
       synchronize: true,
     }),
   ],
